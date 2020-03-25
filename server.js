@@ -43,7 +43,18 @@ app.get('/fruits/:id', (req, res) => {
   // const fruitToSendBack = fruits[indexOfFruit] // access in fruits array above
   // res.send(fruitToSendBack)
 
-  res.send(fruits[req.params.id]) // the above code all in one line
+  // res.send(fruits[req.params.id]) // the above code all in one line
+
+  const fruit = fruits[req.params.id]
+
+  // we could make the output of this route nicer
+  // by inserting the values into some HTML
+  res.send(`
+    <h1>${fruit.name}</h1>
+    <p>Color: ${fruit.color}</p>
+    <p>Ready to eat? ${fruit.readyToEat}</p>
+  `)
+
 })
 
 
