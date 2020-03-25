@@ -1,0 +1,22 @@
+{
+  "name": "intro-rest-templates-mvc-fruit",
+  "version": "1.0.0",
+  "description": "learning how to render data into templates, and REST",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rendering",
+    "templates",
+    "REST",
+    "MVC",
+    "express",
+    "routing"
+  ],
+  "author": "reuben ayres",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
