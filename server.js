@@ -27,6 +27,21 @@ app.get('/fruits', (req, res) => {
 })
 
 
+// get information about just one particular fruit
+// need a URL parameter we can use to identify the fruit we want to work with
+// we'll use the array index
+app.get('/fruits/:id', (req, res) => {
+  // console.log("\nreq.params:");
+  // console.log(req.params);
+  // // the id in req.params will correspond 
+  // const indexOfFruit = req.params.id
+  // const fruitToSendBack = fruits[indexOfFruit] // access in fruits array above
+  // res.send(fruitToSendBack)
+
+  res.send(fruits[req.params.id]) // the above code all in one line
+})
+
+
 
 app.listen(3000, () => {
   console.log("Server running on port 3000");
