@@ -24,6 +24,9 @@ app.get('/', (req, res) => {
 // this is the fruits -----> "index" route <-------- meaning it
 // lists ALL the fruits
 app.get('/fruits', (req, res) => {
+  // ex. modify this route to render an index.ejs template
+  // in the index.ejs template, use a for loop to print a sentence about each fruit.
+
   res.send(fruits)
 })
 
