@@ -36,39 +36,24 @@ app.get('/fruits', (req, res) => {
 // gives us info about JUST ONE fruit
 // show route will always have a URL parameter
 app.get('/fruits/:id', (req, res) => {
-  // console.log("\nreq.params:");
-  // console.log(req.params);
-  // // the id in req.params will correspond 
-  // const indexOfFruit = req.params.id
-  // const fruitToSendBack = fruits[indexOfFruit] // access in fruits array above
-  // res.send(fruitToSendBack)
-
-  // res.send(fruits[req.params.id]) // the above code all in one line
 
   const fruit = fruits[req.params.id]
-
-  // we could make the output of this route nicer
-  // by inserting the values into some HTML
-  // res.send(`
-  //   <h1>${fruit.name}</h1>
-  //   <p>Color: ${fruit.color}</p>
-  //   <p>Ready to eat? ${fruit.readyToEat}</p>
-  // `)
 
   // render a template
   // we RENDER templates using res.render
 
   // res.render() takes 2 arguments
   // the first argument is the template to render
+  // it will automatically look in the views folder
+  // the argument is just path to the template from within the views folder
 
   // the second argument is an object containing data to be inserted 
   // in the template
   // the keys in the object will be variables that you can access in EJS
-
-
-  // it will automatically look in the views folder
-  // the argument is just path to the template from within the views folder
-  res.render('show.ejs', { message: "Hi how are you fine thanks" })
+  res.render('show.ejs', { 
+    message: "Hi how are you fine thanks",
+    fruit: fruit
+  })
 
 })
 

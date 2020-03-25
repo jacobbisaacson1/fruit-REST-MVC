@@ -5,9 +5,17 @@
 </head>
 <body>
 
-  <h1>This is the show page for fruit</h1>
+  <h1>This is the show page for <%= fruit.name %></h1>
 
-  <p>Here is a message: <%= message %> </p>
+  <p>The <%= fruit.name %> is <%= fruit.color %>.</p>
+
+  <% if(fruit.readyToEat === true) { %>
+    <p> It is ready to eat </p>
+  <% } else { %>
+    <p> It is NOT ready to eat </p>
+  <% } %>
+
+  <p>Here is a message: <%= message %>. </p>
 
   <p>This is a template.</p>
 
