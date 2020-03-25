@@ -22,6 +22,9 @@ app.get('/', (req, res) => {
 // we are going to let users CRUD all data relating to fruits
 // each route that lets users CRUD fruits will with /fruits
 // the path will begin with /fruits -- ALWAYS USE PLURAL NOUNS
+
+// this is the fruits -----> "index" route <-------- meaning it
+// lists ALL the fruits
 app.get('/fruits', (req, res) => {
   res.send(fruits)
 })
@@ -30,6 +33,10 @@ app.get('/fruits', (req, res) => {
 // get information about just one particular fruit
 // need a URL parameter we can use to identify the fruit we want to work with
 // we'll use the array index
+
+// this is the fruits ---> "show" <--- route -- meaning it 
+// gives us info about JUST ONE fruit
+// show route will always have a URL parameter
 app.get('/fruits/:id', (req, res) => {
   // console.log("\nreq.params:");
   // console.log(req.params);
