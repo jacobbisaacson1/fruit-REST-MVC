@@ -2,10 +2,8 @@ const express = require('express')
 const app = express()
 
 
-// we are going to use this array to "pretend" that we have a database
-// this is our "Fruit" data
-const fruits = ['apple', 'banana', 'pear']
-
+// import our Model(s)/Data from our models folder
+const fruits = require('./models/fruits.js')
 
 
 app.get('/', (req, res) => {
