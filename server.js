@@ -57,9 +57,18 @@ app.get('/fruits/:id', (req, res) => {
 
   // render a template
   // we RENDER templates using res.render
+
+  // res.render() takes 2 arguments
+  // the first argument is the template to render
+
+  // the second argument is an object containing data to be inserted 
+  // in the template
+  // the keys in the object will be variables that you can access in EJS
+
+
   // it will automatically look in the views folder
   // the argument is just path to the template from within the views folder
-  res.render('show.ejs')
+  res.render('show.ejs', { message: "Hi how are you fine thanks" })
 
 })
 
