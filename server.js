@@ -49,11 +49,17 @@ app.get('/fruits/:id', (req, res) => {
 
   // we could make the output of this route nicer
   // by inserting the values into some HTML
-  res.send(`
-    <h1>${fruit.name}</h1>
-    <p>Color: ${fruit.color}</p>
-    <p>Ready to eat? ${fruit.readyToEat}</p>
-  `)
+  // res.send(`
+  //   <h1>${fruit.name}</h1>
+  //   <p>Color: ${fruit.color}</p>
+  //   <p>Ready to eat? ${fruit.readyToEat}</p>
+  // `)
+
+  // render a template
+  // we RENDER templates using res.render
+  // it will automatically look in the views folder
+  // the argument is just path to the template from within the views folder
+  res.render('show.ejs')
 
 })
 
