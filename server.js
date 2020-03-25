@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 
 
+// we are going to use this array to "pretend" that we have a database
+// this is our "Fruit" data
+const fruits = ['apple', 'banana', 'pear']
 
 
 
@@ -16,6 +19,12 @@ app.get('/', (req, res) => {
 })
 
 
+// we are going to let users CRUD all data relating to fruits
+// each route that lets users CRUD fruits will with /fruits
+// the path will begin with /fruits -- ALWAYS USE PLURAL NOUNS
+app.get('/fruits', (req, res) => {
+  res.send(fruits)
+})
 
 
 
