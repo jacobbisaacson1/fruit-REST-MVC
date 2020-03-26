@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>Fruit Index</h1>
+
+  <ul>
+    <% for(let i = 0; i < fruits.length; i++) { %>
+      <li>
+        The <%= fruits[i].name %> is <%= fruits[i].color %>.
+        It is <%= fruits[i].readyToEat ? "" : "NOT" %> ready to eat.
+      </li>
+
+    <% } %>
+    
+  </ul>
+
+</body>
+</html>
