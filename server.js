@@ -6,6 +6,12 @@ const app = express()
 const fruits = require('./models/fruits.js')
 
 
+// set up static assets (images/css/client-side JS/etc)
+// https://expressjs.com/en/starter/static-files.html
+app.use(express.static('public'))
+
+
+
 app.get('/', (req, res) => {
   // fun stuff: you can res.send html with values inserted into it
   const today = new Date()
