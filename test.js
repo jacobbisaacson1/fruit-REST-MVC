@@ -20,7 +20,7 @@ console.log(mood);
 
 weather = "sunny"
 
-mood = ( weather === "sunny" ? "good" : "bad")
+mood = weather === "sunny" ? "good" : "bad" // ouch!
 
 console.log("\nweather is ", weather);
 console.log(mood);

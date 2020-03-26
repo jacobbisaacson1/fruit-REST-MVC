@@ -7,9 +7,16 @@
   <h1>Fruit Index</h1>
 
   <ul>
-    <% for(let i = 0; i < fruits.length; i++) { %>
+    <%      
+      for(let i = 0; i < fruits.length; i++) {   
+        // you can have multiple lines between the statement tags
+        // https://ejs.co/
+        // https://ejs.co/#docs
+        console.log(fruits[i].name)    
+        let fruitNumber = i + 1
+      %>
       <li>
-        The <%= fruits[i].name %> is <%= fruits[i].color %>.
+        Fruit number <%= fruitNumber %> is <%=   fruits[i].name    %>. It is <%= fruits[i].color %>.
         It is <%= fruits[i].readyToEat ? "" : "NOT" %> ready to eat.
       </li>
 
